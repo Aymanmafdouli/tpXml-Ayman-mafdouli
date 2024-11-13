@@ -1,0 +1,77 @@
+{
+    "aeroport": {
+      "employes": [
+        {
+          "id": "e1",
+          "nomEmploye": "ayman",
+          "age": 23,
+          "poste": "Pilote"
+        },
+        {
+          "id": "e2",
+          "nomEmploye": "youssef",
+          "age": 29,
+          "poste": "Agent"
+        }
+      ],
+      "pistes": [
+        {
+          "id": "b1",
+          "longueur": 1800,
+          "materiau": "Asphalte"
+        },
+        {
+          "id": "b2",
+          "longueur": 2000,
+          "materiau": "Beton"
+        }
+      ],
+      "compagnies": [
+        {
+          "id": "a1",
+          "nomCompagnie": "Air France",
+          "code": "IATA"
+        },
+        {
+          "id": "a2",
+          "nomCompagnie": "Ryanair",
+          "code": "RY"
+        }
+      ],
+      "avions": [
+        {
+          "id": "f1",
+          "compagnie": "a1",
+          "modele": "Boeing 737",
+          "capacite": 180
+        },
+        {
+          "id": "f2",
+          "compagnie": "a2",
+          "modele": "Airbus A320",
+          "capacite": 200
+        }
+      ],
+      "vols": [
+        {
+          "id": "v1",
+          "avionRef": "f1",
+          "numero": "AF1234",
+          "depart": "Paris",
+          "arrivee": "Fès",
+          "dateDepart": "2024-11-15",
+          "dateArrivee": "2024-11-15"
+        },
+        {
+          "id": "v2",
+          "avionRef": "f2",
+          "numero": "LH5678",
+          "depart": "Rabat",
+          "arrivee": "Paris",
+          "dateDepart": "2024-11-16",
+          "dateArrivee": "2024-11-16"
+        }
+      ]
+    }
+  }
+  

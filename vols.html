@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Informations des vols</title>
+</head>
+<body>
+  <h1>Informations des vols</h1>
+  <div id="volsContainer"></div>
+
+  <script>
+    fetch("aeroport.xml")
+      .then(response => {
+        if (!response.ok) throw new Error("Erreur lors du chargement du fichier XML");
+        return response.text();
+      })
+      .then(data => {
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(data, "application/xml");
+
+        
+        let vols = xmlDoc.getElementsByTagName("vol");
+        let container = document.getElementById("volsContainer");
+
+        for (let vol of vols) {
+          let numero = vol.getElementsByTagName("numero")[0].textContent;
+          let depart = vol.getElementsByTagName("depart")[0].textContent;
+          let arrivee = vol.getElementsByTagName("arrivee")[0].textContent;
+          let dateDepart = vol.getElementsByTagName("dateDepart")[0].textContent;
+          let dateArrivee = vol.getElementsByTagName("dateArrivee")[0].textContent;
+
+          let volInfo = document.createElement("div");
+          volInfo.innerHTML = `<p><strong>Numéro du vol :</strong> ${numero}</p>
+                               <p><strong>Départ :</strong> ${depart}</p>
+                               <p><strong>Arrivée :</strong> ${arrivee}</p>
+                               <p><strong>Date de départ :</strong> ${dateDepart}</p>
+                               <p><strong>Date d'arrivée :</strong> ${dateArrivee}</p>`;
+          container.appendChild(volInfo);
+        }
+      })
+      
+
+      .catch(error => {
+        document.getElementById("volsContainer").innerText = 
+          "Erreur lors du chargement du fichier XML : " + error.message;
+        console.error("Erreur lors du chargement du fichier XML :", error);
+      });
+  </script>
+</body>
+</html>

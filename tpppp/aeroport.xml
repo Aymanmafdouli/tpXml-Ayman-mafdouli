@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aeroport SYSTEM "aeroport.dtd">
+<aeroport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/acer/Desktop/tpppp/aeroport.xsd">
+    <employes>
+        <employe id="e1">
+            <nomEmploye>ayman</nomEmploye>
+            <age>23</age>
+            <poste>Pilote</poste>
+        </employe>
+        <employe id="e2">
+            <nomEmploye>youssef</nomEmploye>
+            <age>29</age>
+            <poste>Agent</poste>
+        </employe>
+    </employes>
+
+    <pistes>
+        <piste id="b1">
+            <longueur>1800</longueur>
+            <materiau>Asphalte</materiau>
+        </piste>
+        <piste id="b2">
+            <longueur>2000</longueur>
+            <materiau>Beton</materiau>
+        </piste>
+    </pistes>
+
+    <compagnies>
+        <compagnie id="a1">
+            <nomCompagnie>Air France</nomCompagnie>
+            <code>IATA</code>
+        </compagnie>
+        <compagnie id="a2">
+            <nomCompagnie>Ryanair</nomCompagnie>
+            <code>RY</code>
+        </compagnie>
+    </compagnies>
+
+    <avions>
+        <avion id="f1" compagnie="a1">
+            <modele>Boeing 737</modele>
+            <capacite>180</capacite>
+        </avion>
+        <avion id="f2" compagnie="a2">
+            <modele>Airbus A320</modele>
+            <capacite>200</capacite>
+        </avion>
+    </avions>
+
+    <vols>
+        <vol id="v1" avionRef="f1">
+            <numero>AF1234</numero>
+            <depart>Paris</depart>
+            <arrivee>Fès</arrivee>
+            <dateDepart>2024-11-15</dateDepart>
+            <dateArrivee>2024-11-15</dateArrivee>
+        </vol>
+        <vol id="v2" avionRef="f2">
+            <numero>LH5678</numero>
+            <depart>Rabat</depart>
+            <arrivee>Paris</arrivee>
+            <dateDepart>2024-11-16</dateDepart>
+            <dateArrivee>2024-11-16</dateArrivee>
+        </vol>
+    </vols>
+</aeroport>
